@@ -26,10 +26,7 @@ todo :
     />
     <meta property="og:type" content="website" />
     <title>Desktop</title>
-    <script src="windowscript.js" defer></script>
-    <script src="dragscript.js" defer></script>
-    <script src="anotherscript.js" defer></script>
-    <script src="initentry.js" defer></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="light-mode.css" id="theme-link" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/vista_info.ico" />
@@ -37,7 +34,7 @@ todo :
   </head>
 
   <body>
-    <!-- INITIAL ENTRY WARNING -->
+    <!-- INITIAL ENTRY SETTINGS -->
     <div id="entryMessage" style="overflow-y: hidden" class="hidden">
       <div
         id="entryMidBox"
@@ -502,11 +499,17 @@ todo :
         >
           File Explorer
         </span>
-        <div id="closeWindowButton" onclick="closeTab('window5')"></div>
+        <div
+          id="closeWindowButton"
+          onclick="
+            closeTab('window5');
+            resetAddressNavigation();
+          "
+        ></div>
       </div>
 
       <div class="webBox" id="webBoxWindowFive">
-        <div
+        <!-- <div
           id="explorerNavigationMenu"
           style="
             width: 100%;
@@ -525,7 +528,7 @@ todo :
             />
             <p style="float: left; margin-left: 30px; margin-top: 8px">Back</p>
           </div>
-        </div>
+        </div> -->
 
         <div
           id="explorerAddressMenu"
@@ -582,6 +585,7 @@ todo :
                 font-size: 12px;
                 margin-top: 4px;
               "
+              id="addressAddressBoxText"
             >
               C:\
             </p>
@@ -668,34 +672,10 @@ todo :
               <p style="margin: 0px; font-size: 12px; margin-left: 35px">
                 My Documents
               </p>
-              <div
-                id="myDocumentsMusic"
-                style="
-                  margin-top: 3px;
-                  height: 4%;
-                  border: 0px solid black;
-                  width: 70%;
-                  left: 30%;
-                  position: absolute;
-                  z-index: 0;
-                "
-              ></div>
-              <div style="margin-top: 3px">
-                <img
-                  src="assets/Folder Opened.png"
-                  style="height: 12px; position: absolute; left: 47px"
-                />
-                <p
-                  style="
-                    margin: 0px;
-                    font-size: 12px;
-                    margin-left: 63px;
-                    text-align: left;
-                    z-index: 1;
-                  "
-                >
-                  Music
-                </p>
+              <div id="myDocumentsMusic"></div>
+              <div class="musicRow" onclick="regFileExploreMusicClick()">
+                <img src="assets/Folder Opened.png" />
+                <p>Music</p>
               </div>
             </div>
           </div>
@@ -710,7 +690,14 @@ todo :
             margin-top: calc(5% + 1px);
             margin-left: 35%;
           "
-        ></div>
+        >
+          <div id="music1">
+            <img
+              src="assets/WMV.png"
+              style="height: 36px; position: absolute; top: 10px; left: 17px"
+            />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -729,19 +716,13 @@ todo :
           height: fit-content;
           width: fit-content;
           text-align: center;
-          font-family: Franklin Gothic Medium;
         "
       >
         <img
           src="assets/Internet Shortcut.png"
           style="height: 100px; padding: 10px; padding-bottom: 0px"
         />
-        <div
-          class="desktopShortcutText"
-          style="color: white; padding-bottom: 10px"
-        >
-          Music
-        </div>
+        <div class="desktopShortcutText">Music</div>
       </div>
 
       <!-- README.TXT SHORTCUT -->
@@ -776,9 +757,6 @@ todo :
           height: fit-content;
           width: fit-content;
           text-align: center;
-          font-family:
-            &quot;Franklin Gothic Medium&quot;, &quot;Arial Narrow&quot;, Arial,
-            sans-serif;
         "
       >
         <img src="assets/Explorer.png" style="height: 100px; padding: 10px" />
@@ -814,7 +792,7 @@ todo :
     <div id="startMenu" class="hidden">
       <div id="topBlueStartMenu">
         <div id="userDisplay">
-          <img src="assets/start.svg" />
+          <img src="assets/Profile Picture" />
           <p>Guest</p>
         </div>
       </div>

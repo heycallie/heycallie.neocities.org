@@ -273,6 +273,10 @@
   position: absolute;
 }
 
+#webBoxWindowFive {
+  user-select: none;
+}
+
 #webBoxWindowFour {
   background-color: white;
   color: black;
@@ -433,7 +437,7 @@ audio {
 
 .desktopShortcutText {
   text-shadow: 2px 2px 4px #000000;
-  font-family: Franklin Gothic;
+  font-family: Franklin Gothic Regular;
   color: white;
 }
 
@@ -519,6 +523,27 @@ audio {
   background-color: #cfcbb7;
 }
 
-#myDocumentsMusic:hover {
+.musicRow {
+  position: absolute;
+  left: 47px;
+  top: 85px; /* adjust to match your layout */
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: 50px;
+  z-index: 1;
+}
+
+.musicRow img {
+  height: 12px;
+  margin-right: 4px;
+}
+
+.musicRow p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.musicRow:hover {
   background-color: grey;
 }
