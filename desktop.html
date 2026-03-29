@@ -1,9 +1,8 @@
 <!--
 todo :
-  add the file explorer (reference in bookmarks, also just use windows xp through that website)
+  add the file explorer (reference in bookmarks, also just use windows xp through xp.quenq.com)
   remove hidden from readme.txt and initial entry screen
   make logout refresh page (return to welcome screen)
-  yeah yeah wtv
 -->
 
 <!doctype html>
@@ -22,7 +21,7 @@ todo :
     />
     <meta
       property="og:url"
-      content="https://heycallie.neocities.org/finaltest.html"
+      content="https://heycallie.neocities.org/desktop.html"
     />
     <meta property="og:type" content="website" />
     <title>Desktop</title>
@@ -35,7 +34,7 @@ todo :
 
   <body>
     <!-- INITIAL ENTRY SETTINGS -->
-    <div id="entryMessage" style="overflow-y: hidden" class="hidden">
+    <div id="entryMessage" style="overflow-y: hidden" class="">
       <div
         id="entryMidBox"
         style="
@@ -66,7 +65,7 @@ todo :
         <div id="welcomeBorder"></div>
         <div id="welcomeSideLeft">
           <div id="welcomeUserLogin" onclick="userChoseGuest()">
-            <img src="assets/windows_xp_147.jpg" />
+            <img src="assets/windows_xp_147.png" />
             <p
               style="
                 font-size: 20px;
@@ -79,7 +78,7 @@ todo :
             </p>
           </div>
           <div id="guestUserSettings">
-            <img src="assets/windows_xp_147.jpg" />
+            <img src="assets/windows_xp_147.png" />
             <p
               style="
                 font-size: 20px;
@@ -139,7 +138,7 @@ todo :
     </div>
 
     <!-- README.TXT -->
-    <div id="window4" class="window draggable hidden">
+    <div id="window4" class="window draggable">
       <div id="window4Drag">
         <img
           src="assets/Notepad.png"
@@ -167,18 +166,19 @@ todo :
 
       <div contenteditable="true" class="webBox" id="webBoxWindowFour">
         <p style="padding-left: 15px; padding-right: 15px">
-          hey! welcome to my website :3<br />this is an interactive
-          webpage--most (if not all) of the things you see here, you'll be able
-          to interact with! that includes everything on the desktop, the
-          taskbar, and start menu! make sure to click around to get the full
-          experience of this website :D<br /><br />want to change your settings?
-          refresh the page! (none of your changes save, sorry!)
+          hey! welcome to my website :3<br />this is an interactive webpage--a
+          lot of the things you see here, you'll be able to interact with! that
+          includes everything on the desktop, the taskbar, and start menu! make
+          sure to click around to get the full experience of this website :D<br /><br />want
+          to change your settings? refresh the page! (none of your changes save,
+          sorry!)<br /><br />i built this in a CAVE! with a BOX OF SCRAPS!<br />(this
+          whole webpage uses html, css, and js. nothing more.)
 
-          <span contenteditable="false"
+          <span
             ><br /><br />there's still a lot more to do! if you want to know
             what i'm working on, check the todo on
-            <a href="/">the home page!</a></span
-          >
+            <a href="/" contenteditable="false">the home page!</a></span
+          ><br /><br />all credit goes to my one swedish friend
         </p>
       </div>
     </div>
@@ -242,16 +242,15 @@ todo :
           >
           <span style="font-family: Mohawk">]</span>
           <br />
-          <img src="assets/fem-2.png" style="height: 130px" />
+          <a href="https://femtanyl.bandcamp.com"
+            ><img
+              src="assets/fem-2.png"
+              style="height: 130px; border-radius: 20px"
+          /></a>
         </h1>
 
         <p style="padding-left: 10px; padding-right: 10px; margin-top: 15px">
-          i love femtanyl's music so much. shes honestly my #1 artist ever of
-          all time + releases music like... somewhat often??? its pretty much
-          just noise, which like, sounds terrible, but its so great when theres
-          just a bit too much going on up there in the cranium and i need a lil
-          break :3 (it's also transgender autism music)<br />anyway yeah
-          femtanyl love femtanyl life &lt;3
+          i love her so much &lt;3
         </p>
         <hr />
 
@@ -303,24 +302,22 @@ todo :
                   alt="Apple Music"
                   title="Apple Music"
               /></a>
-            </li>
-
-            <img
-              src="https://i.ibb.co/WNpNDbY5/maxresdefault.jpg"
-              alt="Ballerina Yehezkal Raz cover art"
-              class="centered-image"
-              style="margin-top: 10px"
-            />
-
-            <audio controls>
-              <source
-                src="assets/ballerina.mp3"
-                type="audio/mpeg"
-                title="Audio Player"
+              <img
+                src="https://i.ibb.co/WNpNDbY5/maxresdefault.jpg"
+                alt="Ballerina Yehezkal Raz cover art"
+                class="centered-image"
+                style="margin-top: 10px"
               />
-              Ballerina by Yehezkal Raz.
-            </audio>
-            <br />
+              <audio controls>
+                <source
+                  src="assets/ballerina.mp3"
+                  type="audio/mpeg"
+                  title="Audio Player"
+                />
+                Ballerina by Yehezkal Raz.
+              </audio>
+              <br />
+            </li>
             <li>
               Frédéric Chopin
               <a
@@ -476,7 +473,7 @@ todo :
     </div>
 
     <!-- FILE EXPLORER -->
-    <div id="window5" class="draggable window">
+    <div id="window5" class="draggable window hidden">
       <div id="window5Drag">
         <img
           src="assets/Explorer.png"
@@ -509,27 +506,6 @@ todo :
       </div>
 
       <div class="webBox" id="webBoxWindowFive">
-        <!-- <div
-          id="explorerNavigationMenu"
-          style="
-            width: 100%;
-            height: 8%;
-            border-bottom: 1px solid #cfcbb7;
-            border-top: 1px solid #cfcbb7;
-            background-color: #f2f3f0;
-            margin-top: 1px;
-            user-select: none;
-          "
-        >
-          <div id="navigationMenuBackContainment">
-            <img
-              src="assets/Back.png"
-              style="height: 20px; position: absolute; left: 4px; top: 2%"
-            />
-            <p style="float: left; margin-left: 30px; margin-top: 8px">Back</p>
-          </div>
-        </div> -->
-
         <div
           id="explorerAddressMenu"
           style="
@@ -691,16 +667,86 @@ todo :
             margin-left: 35%;
           "
         >
-          <div id="music1">
-            <img
-              src="assets/WMV.png"
-              style="height: 36px; position: absolute; top: 10px; left: 17px"
-            />
+          <div id="cMyDocumentsMusicFiles" class="hidden">
+            <div id="fileMusicSweden" onclick="regFileMusicSwedenClick()">
+              <img
+                src="assets/WMV.png"
+                style="height: 36px; position: absolute; top: 10px; left: 17px"
+              />
+              <span
+                style="
+                  position: absolute;
+                  text-align: center;
+                  left: 7px;
+                  top: 50px;
+                  font-size: 12px;
+                "
+                >Static.mp4</span
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div id="window6" class="window draggable hidden">
+      <div id="window6Drag">
+        <img
+          src="assets/WMV.png"
+          height="20px"
+          style="
+            float: left;
+            vertical-align: middle;
+            padding-top: 5px;
+            padding-left: 5px;
+          "
+        />
+        <span
+          style="
+            padding-top: 5px;
+            vertical-align: middle;
+            float: left;
+            padding-left: 6px;
+            font-family: Pixelify Sans;
+          "
+          id="mediaPlayerWindowName"
+        >
+        </span>
+        <div
+          id="closeWindowButton6"
+          onclick="
+            closeTab('window6');
+            stopMediaPlayerPlaying();
+          "
+        ></div>
+      </div>
+      <div class="webBox" id="webBoxWindowSix">
+        <!--<iframe
+          id="mediaPlayeriFrame"
+          src=""
+          style="height: calc(98%); width: 100%"
+        ></iframe>-->
+
+        <iframe
+          src=""
+          title=""
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          id="mediaPlayeriFrame"
+          style="height: 100%; width: 100%; position: absolute; bottom: 0px"
+          referrerpolicy="strict-origin-when-cross-origin"
+          autoplay
+        ></iframe>
+      </div>
+    </div>
     <!-- DESKTOP -->
     <div>
       <!-- MUSIC INTERNET SHORTCUT -->

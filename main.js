@@ -117,8 +117,6 @@ function regWindowClick(event) {
   bringToFront(this);
 }
 
-/* document.getElementById("window3").addEventListener(""); */
-
 const win = document.getElementById("window");
 if (win) dragElement(win);
 
@@ -210,10 +208,26 @@ function userChoseGuest() {
 function regFileExploreMusicClick() {
   document.getElementById("addressAddressBoxText").innerHTML =
     "C:&#92;Users&#92;Guest&#92;My Documents&#92;Music";
-  // document.getElementById("placeholder").classList.remove("hidden");
+  document.getElementById("cMyDocumentsMusicFiles").classList.remove("hidden");
 }
 
 function resetAddressNavigation() {
   document.getElementById("addressAddressBoxText").innerHTML = "C:&#92;";
-  // document.getElementById("placeholder").classList.add("hidden");
+  document.getElementById("cMyDocumentsMusicFiles").classList.add("hidden");
+}
+
+var mediaPlayeriFrame = document.getElementById("mediaPlayeriFrame");
+
+function regFileMusicSwedenClick() {
+  var mediaplayer = document.getElementById("window6");
+  mediaplayer.classList.remove("hidden");
+  bringToFront(mediaplayer);
+  document.getElementById("mediaPlayerWindowName").innerHTML = "Static.mp4";
+  mediaPlayeriFrame.src =
+    "https://www.youtube.com/embed/KlTNKOnfXFk?si=N1fmvjAxYjO3welF&amp;controls=1&amp;autoplay=1";
+  mediaPlayeriFrame.title = "Static ft. Hatsune Miku";
+}
+
+function stopMediaPlayerPlaying() {
+  document.getElementById("mediaPlayeriFrame").src = "";
 }
