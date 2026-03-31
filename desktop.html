@@ -1,8 +1,7 @@
 <!--
-todo :
-  add the file explorer (reference in bookmarks, also just use windows xp through xp.quenq.com)
+before uploading :
   remove hidden from readme.txt and initial entry screen
-  make logout refresh page (return to welcome screen)
+  hide all windows except readme.txt
 -->
 
 <!doctype html>
@@ -34,7 +33,7 @@ todo :
 
   <body>
     <!-- INITIAL ENTRY SETTINGS -->
-    <div id="entryMessage" style="overflow-y: hidden" class="">
+    <div id="entryMessage" style="overflow-y: hidden" class="hidden">
       <div
         id="entryMidBox"
         style="
@@ -138,7 +137,7 @@ todo :
     </div>
 
     <!-- README.TXT -->
-    <div id="window4" class="window draggable">
+    <div id="window4" class="window draggable hidden">
       <div id="window4Drag">
         <img
           src="assets/Notepad.png"
@@ -721,12 +720,6 @@ todo :
         ></div>
       </div>
       <div class="webBox" id="webBoxWindowSix">
-        <!--<iframe
-          id="mediaPlayeriFrame"
-          src=""
-          style="height: calc(98%); width: 100%"
-        ></iframe>-->
-
         <iframe
           src=""
           title=""
@@ -835,14 +828,136 @@ todo :
     </div>
 
     <!-- START MENU -->
-    <div id="startMenu" class="hidden">
+    <div id="startMenu" class="">
       <div id="topBlueStartMenu">
         <div id="userDisplay">
-          <img src="assets/Profile Picture" />
-          <p>Guest</p>
+          <img src="assets/windows_xp_147.png" />
+          <p style="user-select: none">Guest</p>
+        </div>
+        <div id="userTime">
+          <span
+            id="userTimeDisplay"
+            style="
+              position: absolute;
+              top: 40%;
+              right: 20px;
+              font-family: Franklin Gothic Regular;
+              color: white;
+              font-size: 22px;
+              user-select: none;
+            "
+          ></span>
         </div>
       </div>
-      <div id="bottomBlueStartMenu"></div>
+      <div
+        id="middleStartMenu"
+        style="width: 100%; height: 400px; position: absolute; top: 80px"
+      >
+        <div
+          id="changeBackgroundBliss"
+          style="
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            user-select: none;
+          "
+          onclick="changeBackgroundDefault()"
+        >
+          <img
+            src="assets/Bliss-downscaled.png"
+            style="
+              height: 30px;
+              border-radius: 15%;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+            "
+          /><span
+            style="
+              position: absolute;
+              top: 20px;
+              left: 50px;
+              font-family: Franklin Gothic Regular;
+            "
+            >Change background to Bliss</span
+          >
+        </div>
+        <div
+          id="changeBackgroundLilies"
+          style="
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            user-select: none;
+            top: 50px;
+          "
+          onclick="changeBackgroundWaterlilies()"
+        >
+          <img
+            src="assets/Lilies-downscaled.png"
+            style="
+              height: 30px;
+              border-radius: 15%;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+            "
+          /><span
+            style="
+              position: absolute;
+              top: 20px;
+              left: 50px;
+              font-family: Franklin Gothic Regular;
+            "
+            >Change background to Water Lilies</span
+          >
+        </div>
+        <div
+          id="changeBackgroundTulips"
+          style="
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            user-select: none;
+            top: 100px;
+          "
+          onclick="changeBackgroundTulips()"
+        >
+          <img
+            src="assets/Tulips-downscaled.png"
+            style="
+              height: 30px;
+              border-radius: 15%;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+            "
+          /><span
+            style="
+              position: absolute;
+              top: 20px;
+              left: 50px;
+              font-family: Franklin Gothic Regular;
+            "
+            >Change background to Tulips</span
+          >
+        </div>
+      </div>
+      <div id="bottomBlueStartMenu">
+        <div id="restartIcon" onclick="reboot()"></div>
+        <span
+          style="
+            position: absolute;
+            top: 9px;
+            right: 46px;
+            font-family: Arial Narrow Bold Italic;
+            color: white;
+            font-size: 20px;
+            user-select: none;
+          "
+          >restart</span
+        >
+      </div>
     </div>
   </body>
 </html>

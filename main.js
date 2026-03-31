@@ -177,6 +177,7 @@ function userEntry() {
   if (popups.checked == true) {
     popupsDisable();
   }
+  updateTime();
   closeEntryMessage();
 }
 
@@ -230,4 +231,31 @@ function regFileMusicSwedenClick() {
 
 function stopMediaPlayerPlaying() {
   document.getElementById("mediaPlayeriFrame").src = "";
+}
+
+function reboot() {
+  location.reload();
+}
+
+function updateTime() {
+  const now = new Date();
+
+  let hours = now.getHours();
+  const minutes = now.getMinutes();
+  let ampm = "am";
+
+  if (hours >= 12) {
+    ampm = "pm";
+    if (hours > 12) hours -= 12;
+  }
+  if (hours === 0) hours = 12;
+
+  const formattedMinutes = minutes.toString().padStart(2, "0");
+
+  document.getElementById("userTimeDisplay").textContent =
+    `it is ${hours}:${formattedMinutes} ${ampm} :)`;
+
+  const delay = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
+
+  setTimeout(updateTime, delay);
 }

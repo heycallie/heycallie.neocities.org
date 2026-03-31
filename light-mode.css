@@ -443,7 +443,7 @@ audio {
   color: white;
   position: absolute;
   left: 80px;
-  top: 22px;
+  top: 30px;
   font-size: 30px;
   margin-top: 0px;
   font-family: Franklin Gothic Regular;
@@ -576,4 +576,34 @@ audio {
 
 .musicRow:hover {
   background-color: grey;
+}
+
+#bottomBlueStartMenu #restartIcon {
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background-image: url("assets/Restart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bottomBlueStartMenu #restartIcon:hover {
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background-image: url("assets/Restart-shaded.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#changeBackgroundBliss:hover,
+#changeBackgroundLilies:hover,
+#changeBackgroundTulips:hover {
+  background-color: #cfcbb7;
 }
