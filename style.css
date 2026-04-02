@@ -55,7 +55,7 @@
 
 @font-face {
   font-family: "Chiron";
-  src: url("assets/ChironGoRoundTC-VariableFont_wght.ttf") format("truetype");
+  src: url("assets/ChironGoRoundTC-Regular.ttf") format("truetype");
 }
 
 @keyframes rainbow-color-change {
@@ -81,4 +81,11 @@
   84% {
     color: #e800ff;
   } /* Violet */
+}
+
+.chiron-goround-tc-blogfont {
+  font-family: "Chiron GoRound TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
