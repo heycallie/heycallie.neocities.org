@@ -220,16 +220,18 @@ function regFileExploreMusicClick() {
   document.getElementById("addressAddressBoxText").innerHTML =
     "C:&#92;Users&#92;Guest&#92;My Documents&#92;Music";
   document.getElementById("cMyDocumentsMusicFiles").classList.remove("hidden");
+  document.getElementById("window5Name").innerHTML = "Music - File Explorer";
 }
 
 function resetAddressNavigation() {
   document.getElementById("addressAddressBoxText").innerHTML = "C:&#92;";
   document.getElementById("cMyDocumentsMusicFiles").classList.add("hidden");
+  document.getElementById("window5Name").innerHTML = "File Explorer";
 }
 
 var mediaPlayeriFrame = document.getElementById("mediaPlayeriFrame");
 
-function regFileMusicSwedenClick() {
+function regFileMusicStaticClick() {
   var mediaplayer = document.getElementById("window6");
   mediaplayer.classList.remove("hidden");
   bringToFront(mediaplayer);
