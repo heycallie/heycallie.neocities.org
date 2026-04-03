@@ -153,8 +153,8 @@
 
 #window11 {
   position: absolute;
-  top: 355px;
-  left: 208px;
+  top: 111px; /* originally 355 */
+  left: 422px; /* originally 208 */
   z-index: 9;
   background-color: #f1f1f1;
   text-align: center;
