@@ -691,3 +691,11 @@ audio {
   font-family: Cascadia Mono;
   text-align: left;
 }
+
+.blogh3 {
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-top: 0px;
+  font-size: 30px;
+}
