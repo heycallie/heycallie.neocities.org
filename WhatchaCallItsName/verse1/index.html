@@ -25,6 +25,17 @@
         margin-right: auto;
         display: block;
       }
+
+      #arrow {
+        background-image: url(screen2-removebg-preview.png);
+        display: block;
+        margin: 8% auto 0;
+      }
+
+      #arrow:hover {
+        background-image: url(pixil-frame-0-removebg-preview.png);
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -122,7 +133,7 @@
 
     <img src="Webmaster_Think.gif" height="400vh" style="margin-top: 35vh" />
 
-    <h1 style="margin-top: 3vh">
+    <h1 style="margin-top: 3vh; margin-bottom: 20vh">
       <span id="36">What </span>
       <span id="37">if </span>
       <span id="38">I </span>
@@ -131,6 +142,13 @@
       <span id="41">back </span>
       <span id="42">to</span><span id="43">day?</span>
     </h1>
+    <a href="/verse2">
+      <div
+        id="arrow"
+        style="height: 19vh; width: 25vh; background-repeat: no-repeat"
+      ></div
+    ></a>
+
     <div id="breaks2"><br /><br /><br /><br /><br /><br /><br /><br /></div>
 
     <script>
@@ -224,7 +242,7 @@
         { time: 11.726 + OFFSET, action: () => setColor("42") },
         { time: 11.809 + OFFSET, action: () => setColor("43") },
 
-        { time: 9.5 + OFFSET, action: () => scrollTo(0, 9999999) },
+        { time: 11.809 + OFFSET, action: () => scrollTo(0, 9999999) },
       ];
 
       let index = 0;
