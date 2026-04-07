@@ -123,14 +123,15 @@
     <img src="Webmaster_Think.gif" height="400vh" style="margin-top: 35vh" />
 
     <h1 style="margin-top: 3vh">
-      <span>What </span>
-      <span>if </span>
-      <span>I </span>
-      <span>give </span>
-      <span>it </span>
-      <span>back </span>
-      <span>today? </span>
+      <span id="36">What </span>
+      <span id="37">if </span>
+      <span id="38">I </span>
+      <span id="39">give </span>
+      <span id="40">it </span>
+      <span id="41">back </span>
+      <span id="42">to</span><span id="43">day?</span>
     </h1>
+    <div id="breaks2"><br /><br /><br /><br /><br /><br /><br /><br /></div>
 
     <script>
       window.scrollTo(0, 0);
@@ -211,6 +212,19 @@
         { time: 8.983 + OFFSET, action: () => setColor("33") },
         { time: 9.065 + OFFSET, action: () => setColor("34") },
         { time: 9.351 + OFFSET, action: () => setColor("35") },
+
+        { time: 9.5 + OFFSET, action: () => scroll(0.75) },
+
+        { time: 10.09 + OFFSET, action: () => setColor("36") },
+        { time: 10.418 + OFFSET, action: () => setColor("37") },
+        { time: 10.628 + OFFSET, action: () => setColor("38") },
+        { time: 10.914 + OFFSET, action: () => setColor("39") },
+        { time: 11.077 + OFFSET, action: () => setColor("40") },
+        { time: 11.365 + OFFSET, action: () => setColor("41") },
+        { time: 11.726 + OFFSET, action: () => setColor("42") },
+        { time: 11.809 + OFFSET, action: () => setColor("43") },
+
+        { time: 9.5 + OFFSET, action: () => scrollTo(0, 9999999) },
       ];
 
       let index = 0;
